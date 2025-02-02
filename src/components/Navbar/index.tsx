@@ -75,8 +75,8 @@ const Navbar = () => {
         <NavLinks>
           <NavLink to="home" smooth={true} duration={500}>Home</NavLink>
           <NavLink to="about" smooth={true} duration={500}>About</NavLink>
-          <NavLink to="portfolio" smooth={true} duration={500}>Portfolio</NavLink>
-          <NavLink to="services" smooth={true} duration={500}>Services</NavLink>
+          {/* <NavLink to="portfolio" smooth={true} duration={500}>Portfolio</NavLink> */}
+          <NavLink to="services" smooth={true} duration={500}>What I'm good at</NavLink>
           <NavLink to="contact" smooth={true} duration={500}>Contact</NavLink>
         </NavLinks>
       </NavContent>

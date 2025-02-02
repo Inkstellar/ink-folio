@@ -664,10 +664,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <SocialLink href="https://www.behance.net/yourprofile" target="_blank" rel="noopener noreferrer">
+          <SocialLink href="https://www.behance.net/inkstellar" target="_blank" rel="noopener noreferrer">
             <FaBehance />
           </SocialLink>
-          <SocialLink href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+          <SocialLink href="https://www.linkedin.com/in/kousiganmoni/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </SocialLink>
         </SocialLinks>

@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaReact, FaHtml5, FaCss3, FaFigma, FaGithub } from 'react-icons/fa';
-import { SiTypescript,SiMui ,SiJavascript} from "react-icons/si";
+import { SiTypescript, SiMui, SiJavascript } from "react-icons/si";
 import { IconType } from 'react-icons';
- import { DiIllustrator,DiPhotoshop} from "react-icons/di";
+import { DiIllustrator, DiPhotoshop } from "react-icons/di";
 
 // Add this before the About component
 const skills: { icon: IconType; name: string }[] = [
-  { icon: FaFigma, name: 'Figma'},
-  { icon: DiPhotoshop, name: 'Photoshop'},
-  { icon: DiIllustrator, name: 'Illustrator'},
+  { icon: FaFigma, name: 'Figma' },
+  { icon: DiPhotoshop, name: 'Photoshop' },
+  { icon: DiIllustrator, name: 'Illustrator' },
   { icon: FaHtml5, name: 'HTML5' },
   { icon: FaCss3, name: 'CSS3' },
   { icon: FaReact, name: 'React' },
-  { icon: SiMui, name: 'MUI'},
-  { icon: FaGithub, name: 'Github'},
+  { icon: SiMui, name: 'MUI' },
+  { icon: FaGithub, name: 'Github' },
   { icon: SiJavascript, name: 'JavaScript' },
   { icon: SiTypescript, name: 'TypeScript' },
 
@@ -102,9 +102,7 @@ const About = () => {
           <AboutContent>
             <h3>Who am I?</h3>
             <p>
-              As a UX Engineer, I bridge the gap between UX design and front-end development, ensuring seamless user experiences through intuitive design and clean, efficient code. With a deep understanding of both user needs and technical feasibility, I collaborate closely with designers and developers to create engaging, accessible, and high-performance digital products."
-              Let me know if you want to highlight any specific skills or experiences!
-            </p>
+              As a UX Engineer, I bridge the gap between UX design and front-end development, ensuring seamless user experiences through intuitive design and clean, efficient code. With a deep understanding of both user needs and technical feasibility, I collaborate closely with designers and developers to create engaging, accessible, and high-performance digital products.</p>
 
             <h3>My Story</h3>
             <p>

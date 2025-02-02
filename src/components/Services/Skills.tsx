@@ -1,7 +1,26 @@
 import styled from 'styled-components';
+import { 
+  FaRoute, 
+  FaMobile, 
+  FaPalette, 
+  FaUniversalAccess, 
+  FaChartLine, 
+  FaLayerGroup, 
+  FaRegWindowMaximize,
+  FaTools
+} from 'react-icons/fa';
+import { 
+  MdSpeed, 
+  MdApi, 
+  MdDevices, 
+  MdArchitecture,
+  MdLibraryBooks,
+  MdAnalytics,
+  MdDashboardCustomize
+} from 'react-icons/md';
 
 const SkillsContainer = styled.div`
-  padding: 2rem;
+  padding: 2rem 0;
 `;
 
 const SkillCategory = styled.div`
@@ -15,7 +34,7 @@ const CategoryTitle = styled.h2`
 
 const SkillsList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 `;
 
@@ -25,44 +44,65 @@ const SkillItem = styled.li`
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  svg {
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: 1.2rem;
+  }
 
   &:hover {
     transform: translateY(-2px);
   }
 `;
 
+const skillsData = [
+  {
+    category: "User Experience",
+    skills: [
+      { name: "User Journey Mapping", icon: FaRoute },
+      { name: "Interactive Prototypes", icon: MdDashboardCustomize },
+      { name: "Design System Creation", icon: FaPalette },
+      { name: "Usability Testing", icon: FaTools },
+      { name: "Information Architecture", icon: MdArchitecture },
+      { name: "User Research & Analysis", icon: MdAnalytics },
+      { name: "Responsive Web Design", icon: MdDevices },
+      { name: "Mobile-First Design", icon: FaMobile }
+    ]
+  },
+  {
+    category: "Front-end Development",
+    skills: [
+      { name: "Single Page Applications", icon: FaRegWindowMaximize },
+      { name: "Progressive Web Apps", icon: FaLayerGroup },
+      { name: "Performance Optimization", icon: MdSpeed },
+      { name: "API Integration", icon: MdApi },
+      { name: "Component Libraries", icon: MdLibraryBooks },
+      { name: "State Management", icon: FaChartLine },
+      { name: "Responsive Layouts", icon: MdDevices },
+      { name: "Cross-browser Compatibility", icon: FaLayerGroup },
+      { name: "Web Accessibility (WCAG)", icon: FaUniversalAccess }
+    ]
+  }
+];
+
 const Skills = () => {
     return (
         <SkillsContainer>
-              <SkillCategory>
-                <CategoryTitle>User Experience</CategoryTitle>
-                <SkillsList>
-                    <SkillItem>Figma</SkillItem>
-                    <SkillItem>Adobe XD</SkillItem>
-                    <SkillItem>Wireframing</SkillItem>
-                    <SkillItem>Prototyping</SkillItem>
-                    <SkillItem>User Research</SkillItem>
-                    <SkillItem>UI Design</SkillItem>
-                    <SkillItem>Design Systems</SkillItem>
-                    <SkillItem>User Testing</SkillItem>
-                </SkillsList>
+          {skillsData.map((category, index) => (
+            <SkillCategory key={index}>
+              <CategoryTitle>{category.category}</CategoryTitle>
+              <SkillsList>
+                {category.skills.map(({ name, icon: Icon }, skillIndex) => (
+                  <SkillItem key={skillIndex}>
+                    <Icon /> {name}
+                  </SkillItem>
+                ))}
+              </SkillsList>
             </SkillCategory>
-            <SkillCategory>
-                <CategoryTitle>Front-end Development</CategoryTitle>
-                <SkillsList>
-                    <SkillItem>HTML5</SkillItem>
-                    <SkillItem>CSS3</SkillItem>
-                    <SkillItem>JavaScript</SkillItem>
-                    <SkillItem>TypeScript</SkillItem>
-                    <SkillItem>React</SkillItem>
-                    <SkillItem>Redux</SkillItem>
-                    <SkillItem>Styled Components</SkillItem>
-                    <SkillItem>MUI React</SkillItem>
-                    <SkillItem>Responsive Design</SkillItem>
-                </SkillsList>
-            </SkillCategory>
-
-          
+          ))}
         </SkillsContainer>
     );
 };

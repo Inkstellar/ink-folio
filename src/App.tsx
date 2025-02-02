@@ -5,7 +5,7 @@ import { theme } from './styles/theme'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import Portfolio from './components/Portfolio'
+// import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Services from './components/Services'
 import { useState } from 'react';
@@ -33,7 +33,7 @@ const App: FC = () => {
       <main>
         <Hero />
          <About />
-        <Portfolio />
+        {/* <Portfolio /> */}
        <Services />
         <Contact /> 
       </main>
